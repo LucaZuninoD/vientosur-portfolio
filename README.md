@@ -11,7 +11,7 @@
 
 ## 🔗 Full Project Page
 
-**→ [View full portfolio with screenshots and details](https://vientosur-portfolio.vercel.app)**
+**→ [View full portfolio with screenshots and details](https://vientosur-portfolio.vercel.app/)**
 
 > If you're browsing this repo locally, open `index.html` directly in your browser.
 

@@ -8,6 +8,92 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* ===================== COLD START BANNER ===================== */
+        .coldstart-banner {
+            display: flex; align-items: flex-start; gap: 18px;
+            background: rgba(234, 179, 8, 0.08); border: 1px solid rgba(234, 179, 8, 0.25);
+            border-radius: var(--radius-md); padding: 20px 24px;
+            margin-bottom: 32px;
+        }
+        .coldstart-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+        .coldstart-banner strong { font-size: 0.9rem; color: #fde68a; display: block; margin-bottom: 4px; }
+        .coldstart-banner p { font-size: 0.83rem; color: var(--text-secondary); line-height: 1.6; }
+        .coldstart-cta {
+            margin-left: auto; flex-shrink: 0; align-self: center;
+            background: rgba(16,185,129,0.18); border: 1px solid rgba(16,185,129,0.4);
+            color: #34d399; padding: 10px 20px; border-radius: 100px;
+            text-decoration: none; font-weight: 700; font-size: 0.85rem;
+            white-space: nowrap; transition: background 0.2s, transform 0.2s;
+        }
+        .coldstart-cta:hover { background: rgba(16,185,129,0.28); transform: translateX(2px); }
+
+        /* ===================== CREDENTIALS ===================== */
+        .creds-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+        .cred-card {
+            background: var(--card-bg); border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg); padding: 24px; backdrop-filter: blur(10px);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .cred-card:hover { transform: translateY(-4px); border-color: rgba(16,185,129,0.3); }
+        .cred-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+        .cred-icon {
+            font-size: 1.5rem; width: 46px; height: 46px;
+            background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.2);
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .cred-role { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+        .cred-desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
+        .cred-field {
+            display: flex; align-items: center; gap: 8px;
+            background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 8px; padding: 9px 12px; margin-bottom: 8px;
+        }
+        .cred-label {
+            font-size: 0.7rem; font-weight: 700; color: var(--text-muted);
+            text-transform: uppercase; letter-spacing: 0.06em;
+            min-width: 58px; flex-shrink: 0;
+        }
+        .cred-value { font-size: 0.8rem; color: var(--text-secondary); flex: 1; font-family: 'Courier New', monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .copy-btn {
+            background: rgba(108,99,255,0.18); border: 1px solid rgba(108,99,255,0.3);
+            color: var(--accent); padding: 4px 10px; border-radius: 6px;
+            font-size: 0.72rem; font-weight: 600; cursor: pointer;
+            flex-shrink: 0; transition: background 0.2s, color 0.2s;
+        }
+        .copy-btn:hover { background: rgba(108,99,255,0.35); }
+        .copy-btn.copied { background: rgba(16,185,129,0.2); border-color: rgba(16,185,129,0.4); color: #34d399; }
+
+        @media (max-width: 900px) { .creds-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 600px) {
+            .coldstart-banner { flex-wrap: wrap; }
+            .coldstart-cta { margin-left: 0; width: 100%; text-align: center; }
+        }
+    
+
+
+        /* ===================== DEMO BUTTON ===================== */
+        .btn-demo {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white; padding: 14px 28px; border-radius: 100px;
+            text-decoration: none; font-weight: 700; font-size: 0.95rem;
+            display: inline-flex; align-items: center; gap: 10px;
+            box-shadow: 0 4px 24px rgba(16, 185, 129, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+        .btn-demo:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(16, 185, 129, 0.6); }
+        .btn-demo-dot {
+            width: 9px; height: 9px; border-radius: 50%;
+            background: white; opacity: 0.9;
+            animation: pulse-green 1.8s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+        @keyframes pulse-green {
+            0%,100% { opacity: 0.9; transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0.5); }
+            50%      { opacity: 0.5; transform: scale(0.7); box-shadow: 0 0 0 4px rgba(255,255,255,0); }
+        }
+
         /* ===================== RESET & BASE ===================== */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -461,15 +547,20 @@
             Enterprise-grade job matching using <strong>Natural Language Processing</strong> and vector embeddings to connect talent with opportunities through semantic analysis — not just keywords.
         </p>
         <div class="hero-cta">
+            <a href="https://vientosur-frontend.vercel.app/" class="btn-demo" target="_blank">
+                <span class="btn-demo-dot"></span>
+                Try Live Demo
+            </a>
             <a href="https://github.com/LucaZuninoD/vientosur-portfolio" class="btn-primary" target="_blank">
                 <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                View on GitHub
+                GitHub Portfolio
             </a>
             <a href="mailto:lucazuninod@gmail.com" class="btn-secondary">
                 <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
                 Contact Me
             </a>
         </div>
+
 
         <!-- STATS -->
         <div class="stats-grid">
@@ -709,6 +800,94 @@
 
 <div class="divider"></div>
 
+<!-- LIVE DEMO -->
+<div class="divider"></div>
+<section id="demo">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag" style="background:rgba(16,185,129,0.14);color:#34d399;">🟢 Live Demo</span>
+            <h2>Try It Yourself</h2>
+            <p>Full platform running on Vercel + Render. Use the credentials below to explore each role.</p>
+        </div>
+
+        <!-- COLD START WARNING -->
+        <div class="coldstart-banner">
+            <div class="coldstart-icon">⏱️</div>
+            <div>
+                <strong>Backend warm-up note</strong>
+                <p>The backend runs on Render's free tier and may take <strong>~5 minutes</strong> to respond on the first request after inactivity. Subsequent actions are fast. Just wait a moment if the login feels slow!</p>
+            </div>
+            <a href="https://vientosur-frontend.vercel.app/" target="_blank" class="coldstart-cta">
+                Open Demo →
+            </a>
+        </div>
+
+        <!-- CREDENTIAL CARDS -->
+        <div class="creds-grid">
+            <div class="cred-card">
+                <div class="cred-header">
+                    <div class="cred-icon">🏢</div>
+                    <div>
+                        <div class="cred-role">Company</div>
+                        <div class="cred-desc">Post jobs, manage pipeline, use AI job optimizer</div>
+                    </div>
+                </div>
+                <div class="cred-field">
+                    <span class="cred-label">Email</span>
+                    <span class="cred-value" data-copy="demo-empresa@example.com">demo-empresa@example.com</span>
+                    <button class="copy-btn" onclick="copyField(this, 'demo-empresa@example.com')">Copy</button>
+                </div>
+                <div class="cred-field">
+                    <span class="cred-label">Password</span>
+                    <span class="cred-value">password123</span>
+                    <button class="copy-btn" onclick="copyField(this, 'password123')">Copy</button>
+                </div>
+            </div>
+
+            <div class="cred-card">
+                <div class="cred-header">
+                    <div class="cred-icon">👤</div>
+                    <div>
+                        <div class="cred-role">Candidate</div>
+                        <div class="cred-desc">Apply to jobs, get AI matching scores, use VientoBot</div>
+                    </div>
+                </div>
+                <div class="cred-field">
+                    <span class="cred-label">Email</span>
+                    <span class="cred-value">demo-postulante@example.com</span>
+                    <button class="copy-btn" onclick="copyField(this, 'demo-postulante@example.com')">Copy</button>
+                </div>
+                <div class="cred-field">
+                    <span class="cred-label">Password</span>
+                    <span class="cred-value">password123</span>
+                    <button class="copy-btn" onclick="copyField(this, 'password123')">Copy</button>
+                </div>
+            </div>
+
+            <div class="cred-card">
+                <div class="cred-header">
+                    <div class="cred-icon">🔍</div>
+                    <div>
+                        <div class="cred-role">Recruiter</div>
+                        <div class="cred-desc">Review candidates, see compatibility scores, chat</div>
+                    </div>
+                </div>
+                <div class="cred-field">
+                    <span class="cred-label">Email</span>
+                    <span class="cred-value">demo-reclutador@example.com</span>
+                    <button class="copy-btn" onclick="copyField(this, 'demo-reclutador@example.com')">Copy</button>
+                </div>
+                <div class="cred-field">
+                    <span class="cred-label">Password</span>
+                    <span class="cred-value">password123</span>
+                    <button class="copy-btn" onclick="copyField(this, 'password123')">Copy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <!-- CHALLENGES -->
 <section id="challenges">
     <div class="container">
@@ -812,6 +991,18 @@
     const lbImg     = document.getElementById('lb-img');
     const lbCaption = document.getElementById('lb-caption');
     const lbCounter = document.getElementById('lb-counter');
+
+    function copyField(btn, text) {
+    navigator.clipboard.writeText(text).then(() => {
+        btn.textContent = '✓ Copied';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.textContent = 'Copy';
+            btn.classList.remove('copied');
+        }, 2000);
+    });
+}
+
 
     function openLightbox(index) {
         currentIndex = index;
