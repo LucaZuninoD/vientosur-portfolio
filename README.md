@@ -1,17 +1,16 @@
-# VientoSur — Plataforma de Reclutamiento con IA
+# Luca Zunino — Portfolio
 
-> Plataforma de reclutamiento y ATS con matching semántico por IA
-> Empezó como tesis de Ingeniería en Sistemas · Hoy en lanzamiento comercial en Patagonia Argentina
+> Full Stack Developer Jr. · Córdoba, Argentina
+> Disponible para posiciones full-time
 
-[![Stack](https://img.shields.io/badge/Stack-Spring%20Boot%20%7C%20Angular%2019%20%7C%20PostgreSQL-667eea)](https://github.com/LucaZuninoD/vientosur-portfolio)
-[![AI](https://img.shields.io/badge/IA-Cohere%20%7C%20pgvector-764ba2)](https://cohere.com)
-[![Status](https://img.shields.io/badge/Status-Lanzamiento%20Comercial-28a745)]()
+[![Stack](https://img.shields.io/badge/Stack-Java%20%7C%20Spring%20Boot%20%7C%20Angular-667eea)]()
+[![Status](https://img.shields.io/badge/Disponibilidad-Full--time-28a745)]()
 
 ---
 
-## Página del proyecto
+## Página del portfolio
 
-**→ [Ver el portfolio completo](https://vientosur-portfolio.vercel.app/)**
+**→ [Ver el portfolio](https://vientosur-portfolio.vercel.app/)**
 
 > Si estás viendo este repo localmente, abrí `index.html` directamente en tu navegador.
 
@@ -19,49 +18,39 @@
 
 ## ¿Qué es esto?
 
-VientoSur es una plataforma fullstack de reclutamiento y bolsa de trabajo con inteligencia artificial que conecta postulantes, empresas y reclutadores freelance mediante matching semántico, parseo automático de CV, mensajería en tiempo real, gestión de eventos y un ATS (Applicant Tracking System) completo con pipeline Kanban.
+Portfolio personal de Luca Zunino, Full Stack Developer Jr. Técnico Superior en Programación (UTN), actualmente cursando la Tecnicatura en Ciencia de Datos e Inteligencia Artificial.
 
-Empezó como mi proyecto final de tesis en Ingeniería en Sistemas y hoy avanza hacia el lanzamiento comercial para PyMEs, consultoras de RRHH y postulantes de la Patagonia argentina.
+Cofundador y desarrollador principal de **VientoSur**, una plataforma de reclutamiento y ATS con matching semántico por IA — proyecto propio, cofundado junto a dos socios y autofinanciado, que empezó como trabajo final de tesis y hoy avanza hacia el lanzamiento comercial en la Patagonia argentina.
 
-> El código fuente y el entorno productivo son privados — VientoSur está incorporando clientes reales. Este repo contiene únicamente la presentación de portfolio. Escribime si querés una demo guiada.
+El portfolio incluye una **demo interactiva real**: una reimplementación en JavaScript del algoritmo heurístico de scoring de afinidad que corre en producción en VientoSur (`SuggestionService.java`), con los mismos pesos por señal (área, tecnologías, modalidad, ubicación, jornada, salario). No es una captura ni un video — es el cálculo corriendo en vivo en el navegador.
 
 ---
 
-## Stack Tecnológico
+## Contenido del portfolio
+
+- **Sobre mí** — trayectoria académica y profesional
+- **Habilidades técnicas** — backend, frontend, datos/IA, DevOps
+- **VientoSur** — proyecto insignia: arquitectura, funcionalidades, stack
+- **Demo en vivo** — motor de matching interactivo, fiel al algoritmo real
+- **Desafíos & decisiones** — problemas de ingeniería resueltos durante el desarrollo
+- **Otros proyectos** — Sistema de Gestión de Consorcios (Stripe, MercadoPago, Scrum)
+
+---
+
+## Stack usado en VientoSur
 
 | Capa | Tecnologías |
 |---|---|
-| Backend | Java 21, Spring Boot 3.2.4, Spring Security (JWT access + refresh), Apache PDFBox / Tika / iText, AWS SDK, Google Calendar API |
-| Frontend | Angular 19 (componentes standalone + SSR), TypeScript 5.7, Bootstrap 5 + SCSS, ng-bootstrap, FullCalendar |
-| Base de datos | PostgreSQL 17 + pgvector (búsqueda por similitud coseno, score de afinidad cacheado) |
-| IA | Cohere API — embeddings multilingües + chat LLM (command-r7b) |
-| Storage | AWS S3 — CVs, fotos de perfil, logos, adjuntos de chat (vía URLs firmadas) |
-| Infraestructura | Docker + Compose (db / backend / frontend), Nginx |
-
----
-
-## Funcionalidades clave
-
-- **Matching semántico** — Embeddings de perfiles y ofertas vía Cohere, comparados por similitud coseno en pgvector, cacheados por par
-- **Parseo automático de CV** — PDF a perfil estructurado usando PDFBox, Tika e iText
-- **ATS con pipeline Kanban** — Etapas y sub-estados configurables, plantillas por categoría, acciones masivas
-- **Chatbot diferenciado por rol** — Handlers por estrategia según rol, clasificación de intención, base de conocimiento
-- **Gestión de entrevistas** — Sincronización con Google Calendar + recordatorios automáticos por email
-- **Contenido asistido por IA** — Generación de cartas de presentación, sugerencias de optimización de ofertas
-- **Mensajería en tiempo real** — Chat directo empresa-candidato con adjuntos
-- **Seguridad de nivel empresarial** — JWT, RBAC en 4 roles, URLs firmadas de S3
-- **Feed de actividad y timeline** — Trazabilidad completa de la actividad de reclutamiento por oferta
-
----
-
-## Sobre las capturas de pantalla
-
-La interfaz de VientoSur cambia con cada iteración, así que en lugar de mantener capturas estáticas que se desactualizan, esta página ofrece coordinar una demo guiada en vivo o compartir una grabación actualizada de la plataforma real.
+| Backend | Java 21, Spring Boot 3.2.4, Spring Security (JWT), Apache PDFBox / Tika / iText, AWS SDK, Google Calendar API |
+| Frontend | Angular 19 (standalone + SSR), TypeScript 5.7, Bootstrap 5 + SCSS |
+| Base de datos | PostgreSQL 17 + pgvector |
+| IA | Cohere API — embeddings multilingües + chat LLM |
+| Infraestructura | Docker + Compose, Nginx, AWS S3 |
 
 ---
 
 ## Contacto
 
-**Luca Zunino** — Founder & Lead Engineer, VientoSur · Full-Stack Developer
+**Luca Zunino** — Full Stack Developer Jr.
 lucazuninod@gmail.com
 [LinkedIn](https://www.linkedin.com/in/lucazuninod/)
