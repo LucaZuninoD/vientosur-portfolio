@@ -247,7 +247,7 @@
         .flagship-intro p { font-size: 0.92rem; color: var(--text); line-height: 1.7; margin: 0; }
         .flagship-intro strong { color: var(--text); }
 
-        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 56px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 16px; margin-bottom: 56px; }
         .stat-card { text-align: center; padding: 8px; }
         .stat-value {
             font-size: 2rem; font-weight: 800;
@@ -531,7 +531,7 @@
         <div class="hero-chips">
             <span class="hero-chip"><i class="bi bi-code-slash"></i> Java · Spring Boot</span>
             <span class="hero-chip"><i class="bi bi-window"></i> Angular · TypeScript</span>
-            <span class="hero-chip"><i class="bi bi-cpu"></i> IA aplicada (Cohere, pgvector)</span>
+            <span class="hero-chip"><i class="bi bi-cpu"></i> IA aplicada (Cohere)</span>
             <span class="hero-chip"><i class="bi bi-box-seam"></i> Docker · AWS</span>
         </div>
     </div>
@@ -547,7 +547,7 @@
         <div class="about-grid">
             <div class="about-bio">
                 <p>Soy Luca, Full Stack Developer Jr. de Río Gallegos, actualmente radicado en Córdoba. Terminé la Tecnicatura Superior en Programación en la UTN y hoy curso la Tecnicatura en Ciencia de Datos e Inteligencia Artificial en el Instituto Politécnico Superior de Córdoba.</p>
-                <p>Durante mi formación combiné backend en Java/Spring Boot con frontend en Angular, y en paralelo cofundé <strong>VientoSur</strong> junto a dos socios: un proyecto autofinanciado que empezó como mi trabajo final de tesis y hoy es una plataforma real en proceso de lanzamiento comercial. Ahí fui el desarrollador principal: diseñé la arquitectura, implementé el backend, el frontend y la integración con servicios de IA.</p>
+                <p>Durante mi formación combiné backend en Java/Spring Boot con frontend en Angular, y en paralelo cofundé <strong>VientoSur</strong> junto a dos socios: un proyecto autofinanciado que empezó como mi trabajo final de tesis y hoy es una plataforma real en proceso de lanzamiento comercial. El código lo escribí íntegramente yo: diseñé la arquitectura, implementé el backend, el frontend, la infraestructura de despliegue y la integración con servicios de IA.</p>
                 <p>Busco una posición full-time donde aportar esa experiencia end-to-end —desde el modelado de base de datos hasta la integración de IA en producto— y seguir aprendiendo de un equipo con más trayectoria.</p>
                 <div class="about-langs">
                     <div class="lang-item">
@@ -561,7 +561,7 @@
                         <strong>Inglés</strong>
                         <div class="lang-dots">
                             <span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span>
-                            <small>Avanzado (Cambridge B2)</small>
+                            <small>B2 — Cambridge, Pass with Distinction</small>
                         </div>
                     </div>
                 </div>
@@ -652,7 +652,6 @@
                 </div>
                 <div class="skill-tags">
                     <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">pgvector</span>
                     <span class="skill-tag">SQL</span>
                     <span class="skill-tag">Cohere API</span>
                     <span class="skill-tag">Python / ML</span>
@@ -682,26 +681,34 @@
         <div class="section-header">
             <span class="section-badge">Proyecto insignia</span>
             <h2 class="section-title">VientoSur — reclutamiento con <span class="highlight">matching semántico</span></h2>
-            <p class="section-subtitle">Plataforma de reclutamiento y ATS con IA para la Patagonia argentina. La construí de punta a punta como desarrollador principal.</p>
+            <p class="section-subtitle">Plataforma de reclutamiento y ATS con IA para la Patagonia argentina. La construí de punta a punta: soy cofundador y el único que escribió código.</p>
         </div>
 
         <div class="flagship-intro">
             <i class="bi bi-info-circle"></i>
-            <p><strong>Contexto:</strong> VientoSur es un proyecto propio, cofundado junto a dos socios y autofinanciado — no es un producto que busque vender acá. Lo incluyo en mi portfolio porque es la evidencia más completa de lo que puedo construir: diseño de arquitectura, backend, frontend e integración de IA en un sistema real, no un ejercicio de curso.</p>
+            <p><strong>Contexto:</strong> VientoSur es un proyecto propio, cofundado junto a dos socios y autofinanciado — no es un producto que busque vender acá. <strong>El código lo escribí íntegramente yo</strong>: arquitectura, backend, frontend, infraestructura e integración de IA. Lo incluyo en mi portfolio porque es la evidencia más completa de lo que puedo construir en un sistema real, no un ejercicio de curso.</p>
         </div>
 
         <div class="stats-grid">
             <div class="stat-card">
-                <span class="stat-value">56</span>
-                <span class="stat-label">Tablas en el modelo de datos</span>
+                <span class="stat-value">275</span>
+                <span class="stat-label">Endpoints REST en 50 controllers</span>
             </div>
             <div class="stat-card">
-                <span class="stat-value">45+</span>
+                <span class="stat-value">79</span>
+                <span class="stat-label">Entidades en el modelo de datos</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">91</span>
                 <span class="stat-label">Servicios en el backend</span>
             </div>
             <div class="stat-card">
-                <span class="stat-value">60+</span>
+                <span class="stat-value">78</span>
                 <span class="stat-label">Componentes en el frontend</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">3.400+</span>
+                <span class="stat-label">Tests automatizados</span>
             </div>
             <div class="stat-card">
                 <span class="stat-value">4</span>
@@ -715,10 +722,10 @@
                 <div class="feature-body">
                     <div class="feature-head">
                         <div class="feature-icon" style="background:#667eea;"><i class="bi bi-diagram-3"></i></div>
-                        <h3 class="feature-title">Matching semántico</h3>
+                        <h3 class="feature-title">Motor de afinidad en dos etapas</h3>
                     </div>
-                    <p class="feature-desc">Diseñé el motor de afinidad: embeddings de perfiles y ofertas vía Cohere, comparados por similitud coseno en pgvector, con un score heurístico de respaldo cuando no conviene llamar al LLM.</p>
-                    <span class="feature-tag"><i class="bi bi-cpu"></i> Cohere + pgvector</span>
+                    <p class="feature-desc">Diseñé el motor de afinidad: un heurístico con pesos por señal (área, tecnologías, modalidad, jornada, ubicación, salario) prefiltra las ofertas candidatas sin costo de IA, y sobre ese conjunto acotado el chat de Cohere emite el score final leyendo perfil y oferta como texto. El mismo heurístico es el fallback cuando el LLM no está disponible.</p>
+                    <span class="feature-tag"><i class="bi bi-cpu"></i> Heurístico + chat LLM</span>
                 </div>
             </div>
             <div class="feature-card">
@@ -782,8 +789,8 @@
             <div class="arch-flow">
                 <div class="arch-node">
                     <div class="arch-node-icon" style="background:#dd0031;"><i class="bi bi-window"></i></div>
-                    <div class="arch-node-title">Angular 19</div>
-                    <div class="arch-node-sub">Frontend con SSR</div>
+                    <div class="arch-node-title">Angular 22</div>
+                    <div class="arch-node-sub">SSR sobre Node</div>
                 </div>
                 <div class="arch-arrow"><i class="bi bi-arrow-left-right"></i></div>
                 <div class="arch-node">
@@ -794,14 +801,14 @@
                 <div class="arch-arrow"><i class="bi bi-arrow-left-right"></i></div>
                 <div class="arch-node">
                     <div class="arch-node-icon" style="background:#336791;"><i class="bi bi-database"></i></div>
-                    <div class="arch-node-title">PostgreSQL</div>
-                    <div class="arch-node-sub">+ pgvector</div>
+                    <div class="arch-node-title">PostgreSQL 17</div>
+                    <div class="arch-node-sub">79 entidades JPA</div>
                 </div>
                 <div class="arch-arrow"><i class="bi bi-arrow-left-right"></i></div>
                 <div class="arch-node">
                     <div class="arch-node-icon" style="background:linear-gradient(135deg,#667eea,#764ba2);"><i class="bi bi-cpu"></i></div>
                     <div class="arch-node-title">Cohere API</div>
-                    <div class="arch-node-sub">Embeddings + chat LLM</div>
+                    <div class="arch-node-sub">Chat LLM · 9 funciones</div>
                 </div>
             </div>
             <div class="stack-grid">
@@ -810,8 +817,8 @@
                     <ul class="stack-list">
                         <li><i class="bi bi-check2"></i> Java 21 + Spring Boot 3.2.4</li>
                         <li><i class="bi bi-check2"></i> Spring Security — JWT con refresh token</li>
-                        <li><i class="bi bi-check2"></i> PostgreSQL 17 + pgvector</li>
-                        <li><i class="bi bi-check2"></i> Cohere Java SDK (embeddings + chat)</li>
+                        <li><i class="bi bi-check2"></i> PostgreSQL 17 — 79 entidades JPA</li>
+                        <li><i class="bi bi-check2"></i> Cohere (chat LLM) · Bucket4j rate limiting</li>
                         <li><i class="bi bi-check2"></i> Apache PDFBox · Tika · iText</li>
                         <li><i class="bi bi-check2"></i> AWS SDK (S3) · Google Calendar API</li>
                     </ul>
@@ -819,10 +826,10 @@
                 <div class="stack-col">
                     <div class="stack-col-title"><i class="bi bi-window"></i> Frontend</div>
                     <ul class="stack-list">
-                        <li><i class="bi bi-check2"></i> Angular 19 — componentes standalone</li>
-                        <li><i class="bi bi-check2"></i> TypeScript 5.7 + SSR</li>
+                        <li><i class="bi bi-check2"></i> Angular 22 — componentes standalone</li>
+                        <li><i class="bi bi-check2"></i> TypeScript 6 + SSR en rutas públicas</li>
                         <li><i class="bi bi-check2"></i> Bootstrap 5 + SCSS</li>
-                        <li><i class="bi bi-check2"></i> ng-bootstrap · ng-select · FullCalendar</li>
+                        <li><i class="bi bi-check2"></i> ng-bootstrap · ng-select · Splide</li>
                         <li><i class="bi bi-check2"></i> RxJS</li>
                     </ul>
                 </div>
@@ -830,7 +837,7 @@
                     <div class="stack-col-title"><i class="bi bi-box-seam"></i> Infraestructura</div>
                     <ul class="stack-list">
                         <li><i class="bi bi-check2"></i> Docker + Compose (db / backend / frontend)</li>
-                        <li><i class="bi bi-check2"></i> Nginx (frontend con build SSR)</li>
+                        <li><i class="bi bi-check2"></i> Nginx en el borde + Node renderizando detrás</li>
                         <li><i class="bi bi-check2"></i> Almacenamiento en AWS S3</li>
                     </ul>
                 </div>
@@ -850,7 +857,7 @@
 
         <div class="demo-intro">
             <i class="bi bi-code-square"></i>
-            <p>Esto no es una captura ni un video: es una reimplementación en JavaScript del algoritmo heurístico real de <code>SuggestionService.java</code>, con los mismos pesos por señal que usa VientoSur en producción como respaldo cuando no conviene llamar al modelo de IA (el sistema real combina esto con embeddings de Cohere + pgvector; acá se ve la capa de reglas que sostiene el ranking incluso sin esa llamada).</p>
+            <p>Esto no es una captura ni un video: es una reimplementación en JavaScript del algoritmo heurístico real de <code>AffinityHeuristicCalculator.java</code>, con los mismos pesos por señal que usa VientoSur en producción. En la plataforma esta capa hace dos trabajos: <strong>prefiltra</strong> las ofertas candidatas antes de gastar una llamada al LLM, y es el <strong>fallback</strong> completo cuando Cohere no está disponible. Sobre el conjunto que sobrevive a este filtro, el chat de Cohere emite el score final.</p>
         </div>
 
         <div class="demo-box">
@@ -974,17 +981,17 @@
             <div class="challenge-card">
                 <div class="challenge-top">
                     <div class="challenge-icon"><i class="bi bi-diagram-3"></i></div>
-                    <h3 class="challenge-title">Matching sin depender de palabras clave</h3>
+                    <h3 class="challenge-title">Análisis semántico sin quemar presupuesto de IA</h3>
                 </div>
                 <div class="challenge-block problem">
                     <span class="challenge-block-label">Problema</span>
-                    <p>Las plataformas tradicionales buscan por palabras exactas y pierden relevancia contextual: "desarrollador" y "software engineer" son el mismo rol pero nunca matchean.</p>
+                    <p>Las plataformas tradicionales buscan por palabras exactas y pierden contexto: "desarrollador" y "software engineer" son el mismo rol y nunca matchean. Pero mandarle cada par candidato/oferta a un LLM no escala: el costo crece con el producto de ambas listas.</p>
                 </div>
                 <div class="challenge-block solution">
                     <span class="challenge-block-label">Solución</span>
-                    <p>Delegué el análisis semántico al modelo multilingüe de Cohere, guardando los vectores en PostgreSQL + pgvector y calculando afinidad por similitud coseno, cacheada por par candidato/oferta para no recalcular.</p>
+                    <p>Separé el problema en dos etapas. Un heurístico determinista y sin costo —pesos por área, tecnologías, modalidad, jornada, ubicación y salario, con descarte inmediato si falta una tecnología obligatoria— recorta el universo a un puñado de candidatas. Recién ahí el chat multilingüe de Cohere lee perfil y oferta como texto y emite el score, que se cachea por par candidato/oferta para no recalcularlo.</p>
                 </div>
-                <span class="challenge-result"><i class="bi bi-check-circle"></i> Matching con contexto real</span>
+                <span class="challenge-result"><i class="bi bi-check-circle"></i> Contexto real, con una llamada al LLM por par que lo amerita</span>
             </div>
             <div class="challenge-card">
                 <div class="challenge-top">

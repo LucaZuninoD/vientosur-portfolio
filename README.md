@@ -42,9 +42,9 @@ El portfolio incluye una **demo interactiva real**: una reimplementación en Jav
 | Capa | Tecnologías |
 |---|---|
 | Backend | Java 21, Spring Boot 3.2.4, Spring Security (JWT), Apache PDFBox / Tika / iText, AWS SDK, Google Calendar API |
-| Frontend | Angular 19 (standalone + SSR), TypeScript 5.7, Bootstrap 5 + SCSS |
-| Base de datos | PostgreSQL 17 + pgvector |
-| IA | Cohere API — embeddings multilingües + chat LLM |
+| Frontend | Angular 22 (standalone + SSR), TypeScript 6, Bootstrap 5 + SCSS |
+| Base de datos | PostgreSQL 17 — 79 entidades JPA |
+| IA | Cohere API — chat LLM (9 funciones), con prefiltrado heurístico propio |
 | Infraestructura | Docker + Compose, Nginx, AWS S3 |
 
 ---
