@@ -1,56 +1,87 @@
 # Luca Zunino — Portfolio
 
-> Full Stack Developer Jr. · Córdoba, Argentina
-> Disponible para posiciones full-time
-
-[![Stack](https://img.shields.io/badge/Stack-Java%20%7C%20Spring%20Boot%20%7C%20Angular-667eea)]()
-[![Status](https://img.shields.io/badge/Disponibilidad-Full--time-28a745)]()
-
----
-
-## Página del portfolio
+> Desarrollador Full Stack · Java / Spring Boot · Angular
+> Córdoba, Argentina · disponible para posiciones full-time
 
 **→ [Ver el portfolio](https://vientosur-portfolio.vercel.app/)**
 
-> Si estás viendo este repo localmente, abrí `index.html` directamente en tu navegador.
+> Si estás leyendo esto en local, abrí `index.html` directamente en el navegador: es una sola
+> página estática, sin build ni dependencias que instalar.
 
 ---
 
-## ¿Qué es esto?
+## Qué es
 
-Portfolio personal de Luca Zunino, Full Stack Developer Jr. Técnico Superior en Programación (UTN), actualmente cursando la Tecnicatura en Ciencia de Datos e Inteligencia Artificial.
+El portfolio de Luca Zunino. Su eje es **VientoSur** ([vientosur.tech](https://vientosur.tech)),
+una plataforma de empleo y ATS con matching por IA **en producción** — proyecto propio,
+cofundado con dos socios y autofinanciado, del que Luca escribió la totalidad del código.
 
-Cofundador y desarrollador principal de **VientoSur**, una plataforma de reclutamiento y ATS con matching semántico por IA — proyecto propio, cofundado junto a dos socios y autofinanciado, que empezó como trabajo final de tesis y hoy avanza hacia el lanzamiento comercial en la Patagonia argentina.
+La página incluye una **demo interactiva real**: una reimplementación en JavaScript del heurístico
+de afinidad que corre en producción (`SuggestionService.getSuggestedOffers`), con los mismos pesos
+por señal —área, tecnologías, modalidad, ubicación, jornada, salario y el bonus combinado— y el
+mismo techo de 110 puntos. No es una captura ni un video: es el cálculo corriendo en el navegador.
 
-El portfolio incluye una **demo interactiva real**: una reimplementación en JavaScript del algoritmo heurístico de scoring de afinidad que corre en producción en VientoSur (`SuggestionService.java`), con los mismos pesos por señal (área, tecnologías, modalidad, ubicación, jornada, salario). No es una captura ni un video — es el cálculo corriendo en vivo en el navegador.
+## Secciones
 
----
+| Sección | Qué contesta |
+|---|---|
+| Hero | Quién es y qué construyó, con el enlace a la plataforma en línea |
+| Sobre mí | Trayectoria académica y profesional, idiomas |
+| Habilidades | Lo que usa, agrupado por capa — sólo lo que está puesto en un proyecto real |
+| VientoSur | Cifras del sistema, funcionalidades, el tablero del producto y el stack por capa |
+| Demo en vivo | El motor de matching, interactivo |
+| Desafíos | Cuatro decisiones técnicas, incluida una que estuvo mal tres despliegues seguidos |
+| Cómo trabajo | Specs, documentación verificada, registro de deuda, suite en verde |
+| Otro proyecto | Sistema de Gestión de Consorcios (UTN, Stripe/MercadoPago, Scrum) |
 
-## Contenido del portfolio
+## De dónde salen las cifras
 
-- **Sobre mí** — trayectoria académica y profesional
-- **Habilidades técnicas** — backend, frontend, datos/IA, DevOps
-- **VientoSur** — proyecto insignia: arquitectura, funcionalidades, stack
-- **Demo en vivo** — motor de matching interactivo, fiel al algoritmo real
-- **Desafíos & decisiones** — problemas de ingeniería resueltos durante el desarrollo
-- **Otros proyectos** — Sistema de Gestión de Consorcios (Stripe, MercadoPago, Scrum)
+Las cifras de la sección VientoSur **no se escriben a mano**: salen del inventario que genera
+`.kiro/scripts/inventario.mjs` del workspace de VientoSur contra el código, más el conteo de
+endpoints del paquete `controller` y el baseline de tests del repo meta.
 
----
+**Última verificación: 11/09/2026.** Al actualizarlas, re-verificar —no copiar de una versión
+anterior de esta página—:
 
-## Stack usado en VientoSur
+```bash
+node .kiro/scripts/inventario.mjs --check
+```
+
+## Identidad visual
+
+El portfolio usa **el mismo sistema de diseño que la landing de VientoSur**, no una imitación:
+los tokens del bloque `:root` de `index.html` son un port literal de
+`vientosur-frontend/src/app/styles/_vs-public.scss` — las mismas dos familias tipográficas
+(**Archivo** display + **Work Sans** texto), el mismo gradiente `#667eea → #764ba2`, los mismos
+radios, sombras y bandas de sección con hairline.
+
+Eso es deliberado: hoy VientoSur es la carta de presentación de Luca, y conviene que el portfolio
+y el producto se lean como una sola marca. Si el sistema de diseño de la plataforma cambia, este
+archivo es el lugar donde mirar para saber qué hay que sincronizar.
+
+Igual que la landing v3, la página **no usa figuras decorativas** —auroras, orbes, blobs—: el color
+lo aportan el tinte de las bandas y el gradiente de marca.
+
+## Stack de VientoSur (lo que la página describe)
 
 | Capa | Tecnologías |
 |---|---|
-| Backend | Java 21, Spring Boot 3.2.4, Spring Security (JWT), Apache PDFBox / Tika / iText, AWS SDK, Google Calendar API |
-| Frontend | Angular 22 (standalone + SSR), TypeScript 6, Bootstrap 5 + SCSS |
-| Base de datos | PostgreSQL 17 — 79 entidades JPA |
-| IA | Cohere API — chat LLM (9 funciones), con prefiltrado heurístico propio |
-| Infraestructura | Docker + Compose, Nginx, AWS S3 |
+| Backend | Java 21, Spring Boot 3.2.4, Spring Security (JWT access + refresh), Bucket4j, Apache PDFBox / Tika / iText, AWS SDK, Google Calendar API, OWASP Dependency-Check |
+| Frontend | Angular 22 (standalone + SSR), TypeScript, RxJS, Bootstrap 5 + SCSS |
+| Base de datos | PostgreSQL 17 — 79 entidades JPA, 71 repositorios |
+| IA | Cohere (chat LLM, con prefiltrado heurístico propio) · Gemini Live (entrevista por voz vía WebRTC) |
+| Infraestructura | Docker + Compose, Nginx, AWS S3, desplegado sobre Coolify |
 
----
+## Archivos
+
+```
+index.html            # la página entera: markup, estilos y la demo. Sin build.
+CV-Luca-Zunino.pdf    # el CV que enlaza el botón "Descargar CV"
+logo2.png             # logo de VientoSur (favicon + tarjeta del hero)
+screenshots/          # capturas del producto — no se usan en la página (están desactualizadas)
+```
 
 ## Contacto
 
-**Luca Zunino** — Full Stack Developer Jr.
-lucazuninod@gmail.com
-[LinkedIn](https://www.linkedin.com/in/lucazuninod/)
+**Luca Zunino** — lucazuninod@gmail.com
+[LinkedIn](https://www.linkedin.com/in/lucazuninod/) · [GitHub](https://github.com/LucaZuninoD) · [VientoSur](https://vientosur.tech)
